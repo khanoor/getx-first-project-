@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getx_project/res/components/internet_exceptions_widget.dart';
+
 
 class SplashScreee extends StatefulWidget {
   const SplashScreee({super.key});
@@ -8,8 +10,15 @@ class SplashScreee extends StatefulWidget {
 }
 
 class _SplashScreeeState extends State<SplashScreee> {
+  TextEditingController email = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return   SafeArea(
+      child: Scaffold(
+        body: Column(children: [
+         InternetExpectionsWidget(onPress: () {  },)
+        ],),
+      ),
+    );
   }
 }
